@@ -18,20 +18,27 @@
 </template>
 
 <script lang="ts">
-export default {
-  props: ["isFound"],
+import { defineComponent, ref } from "vue";
+
+export default defineComponent({
+  props: {
+    isFound: {
+      type: Boolean,
+      required: true,
+    },
+  },
   data() {
     return {
-      agentName: "",
+      agentName: "" as string, // Declare agentName as a string
     };
   },
   methods: {
     searchAgent() {
-      this.$emit("search", this.agentName);
-      this.agentName = "";
+      this.$emit("search", this.agentName); // Emit search event with the agent name
+      this.agentName = ""; // Clear the input after search
     },
   },
-};
+});
 </script>
 
 <style>
