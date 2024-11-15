@@ -80,7 +80,7 @@ export default defineComponent({
   },
   mounted() {
     // Use the environment variable for the API URL
-    fetch(process.env.VUE_APP_API_URL as string) // Type the env variable as string
+    fetch("https://valorant-api.com/v1/agents") // Type the env variable as string
       .then((res) => res.json())
       .then((data) => {
         this.agents = data.data.filter(
