@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <Agents />
-    <Maps />
+    <!-- <Maps /> -->
   </div>
 </template>
 
