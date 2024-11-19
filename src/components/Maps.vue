@@ -1,6 +1,30 @@
 <template>
   <div class="bg-primary q-mt-xl q-pa-lg">
-    <div class="row"></div>
+    <div class="row">
+      <div id="q-app">
+        <div class="q-pa-md">
+          <q-carousel animated v-model="slide" arrows navigation infinite>
+            <!-- Carousel Slides -->
+            <q-carousel-slide
+              :name="1"
+              img-src="https://cdn.quasar.dev/img/mountains.jpg"
+            ></q-carousel-slide>
+            <q-carousel-slide
+              :name="2"
+              img-src="https://cdn.quasar.dev/img/parallax1.jpg"
+            ></q-carousel-slide>
+            <q-carousel-slide
+              :name="3"
+              img-src="https://cdn.quasar.dev/img/parallax2.jpg"
+            ></q-carousel-slide>
+            <q-carousel-slide
+              :name="4"
+              img-src="https://cdn.quasar.dev/img/quasar.jpg"
+            ></q-carousel-slide>
+          </q-carousel>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <h1 class="text-title text-white">MAPS</h1>
       <P class="text-white text-left" style="font-size: 16px">
@@ -33,7 +57,7 @@ import "quasar/src/css/index.sass";
 
 const data = ref(null);
 
-let slide = ref("1");
+let slide = ref(1);
 
 const fetchData = async () => {
   try {
