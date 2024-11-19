@@ -1,5 +1,6 @@
 <template>
   <div class="bg-primary q-mt-xl q-pa-lg">
+    <div class="row"></div>
     <div class="row">
       <h1 class="text-title text-white">MAPS</h1>
       <P class="text-white text-left" style="font-size: 16px">
@@ -19,37 +20,6 @@
         </div>
         <div class="flex justify-center items-center">
           <img :src="map.splash" :alt="map.displayName" class="map-img" />
-          <!-- <q-carousel
-            v-model="slide"
-            transition-prev="jump-right"
-            transition-next="jump-left"
-            swipeable
-            animated
-            control-color="white"
-            prev-icon="arrow_left"
-            next-icon="arrow_right"
-            navigation-icon="radion_button_unchecked"
-            navigation
-            padding
-            arrows
-            height="500px"
-            class="bg-purple text-white shadow-1 rounded-borders"
-          >
-            <q-carousel-slide name="splash" class="column no-wrap flex-center">
-              <div>
-                <img :src="map.splash" :alt="map.displayName" class="map-img" />
-              </div>
-            </q-carousel-slide>
-            <q-carousel-slide name="icon" class="column no-wrap flex-center">
-              <div>
-                <img
-                  :src="map.displayIcon"
-                  :alt="map.displayName"
-                  class="map-img"
-                />
-              </div>
-            </q-carousel-slide>
-          </q-carousel> -->
         </div>
       </div>
     </div>
@@ -63,7 +33,7 @@ import "quasar/src/css/index.sass";
 
 const data = ref(null);
 
-let slide = ref("style");
+let slide = ref("1");
 
 const fetchData = async () => {
   try {
@@ -86,6 +56,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.carousel-container {
+  border: 2px solid white;
+  width: 100%;
+  height: 200px;
+}
 .text-title,
 .map-title {
   font-family: "Tungsten";

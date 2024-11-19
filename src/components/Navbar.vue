@@ -1,20 +1,32 @@
 <template>
-  <nav>
+  <!-- <nav>
     <a
       href="https://playvalorant.com/en-sg/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img src="../assets/Logo/riotLogo.png" class="riotLogo"
-    /></a>
+      <img src="../assets/Logo/riotLogo.png" class="riotLogo" />
+    </a>
     <a
       href="https://playvalorant.com/en-sg/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img src="../assets/Logo/valorantLogo.png" class="valoLogo"
-    /></a>
-  </nav>
+      <img src="../assets/Logo/valorantLogo.png" class="valoLogo" />
+    </a>
+  </nav> -->
+  <div class="q-pa-0 bg-black">
+    <q-toolbar class="bg-black flex items-center">
+      <q-btn flat round dense icon="menu" class="q-mr-sm"></q-btn>
+      <q-avatar class="q-mr-sm">
+        <img src="../assets/Logo/riotLogo.png" class="riotLogo" />
+      </q-avatar>
+      <q-avatar>
+        <img src="../assets/Logo/valorantLogo.png" class="valoLogo" />
+      </q-avatar>
+      <q-btn flat round dense icon="whatshot"></q-btn>
+    </q-toolbar>
+  </div>
 </template>
 
 <script lang="ts">
