@@ -3,6 +3,7 @@
     <Navbar />
     <Agents />
     <Maps />
+    <Footer />
   </div>
 </template>
 
@@ -11,12 +12,14 @@ import Search from "./components/Search.vue";
 import Navbar from "./components/Navbar.vue";
 import Agents from "./components/Agents.vue";
 import Maps from "./components/Maps.vue";
+import Footer from "./components/Footer.vue";
 export default {
   components: {
     Search,
     Navbar,
     Agents,
     Maps,
+    Footer,
   },
 };
 </script>

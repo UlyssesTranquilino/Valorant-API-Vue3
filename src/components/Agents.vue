@@ -8,6 +8,9 @@
 
       <div class="agents">
         <h1 class="agentsText">AGENTS</h1>
+        <div class="filter-buttons bg-grey">
+          <button class="role-button bg-primary text-white">SENTINEL</button>
+        </div>
         <div class="grid-container">
           <div v-for="agent in agents" :key="agent.uuid">
             <div class="card-holder">
@@ -25,6 +28,7 @@ import { defineComponent, ref } from "vue";
 import AgentCard from "./AgentCard.vue";
 import AgentInfo from "./AgentInfo.vue";
 import Search from "./Search.vue";
+import "quasar/src/css/index.sass";
 
 // Define the type for agent data
 interface Agent {
@@ -97,6 +101,20 @@ export default defineComponent({
   src: url("../assets/Fonts/Tungsten-Bold.ttf");
 }
 
+.role-button {
+  width: 120px;
+  height: 50px;
+  border: 0;
+  border-radius: 100px;
+  font-family: "Valorant";
+  font-size: 16px;
+}
+
+.filter-buttons {
+  border: 2px solid white;
+  width: 100%;
+  height: 100px;
+}
 .agents-card-container {
   padding-bottom: 40px;
 }
